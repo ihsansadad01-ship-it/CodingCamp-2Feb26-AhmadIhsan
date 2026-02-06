@@ -5,22 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List - Ihsan</title>
 <!-- CSS External -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- Tailwind CSS CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
 
 <body>
     <!-- Header Content -->
-    <header></header>
+    <header> 
+        <h1 class="text-4xl font-bold pb-7">Todo list - Ihsan</h1>
+    </header>
 
     <!-- Main Content -->
-    <main></main>
+    <main>
+      <!-- form Section -->
+     <section>
+            <form>
+             <!-- Todo Input  -->
+             <input class="border p-2 rounded" type="text" id="todo-input" placeholder="Enter a new Todo item">
+             
+             <!-- date input  -->
+              <input class="border p-2 rounded" type="date" id="todo-date" placeholder="Enter due date">
+            </form>
+        
+           <!-- Add Button -->
+           <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onclick="addTodo()" type="button">Add Todo</button>
+     </section>
+
+     <!-- Action section -->
+<section class="flex pt-2 justify-between">
+    <!-- Clear All Button  -->
+     <button class="border rounded p-2 bg-red-500 text-white" onclick="deleteAllTodos()">Clear All Tudos </button>
+     <!-- Filter Option  -->
+      <button class="border rounded p-2 bg-gray-500 text-white">Filter Todos</button>
+</section>
+
+<!-- Todo List SSection  -->
+ <section class="pt-2"
+ > <header>
+     <h1 class="text-3xl font-semibold">List Of Todos</h1>
+ </header>
+
+ <ul class="pt-2" id="todo-list">
+    <!-- Todo items will be dynamically added here  -->
+    <li> No todos available</li> 
+ </ul>
+</section>
+</main>
+
 
     <!-- Footer Content -->
-    <footer></footer>
+    <footer class="pt-8">
+        <p class = "text-center text-gray-500" >© 2026 Ihsan's Todo List</p>
+    </footer>
 
 <!-- Javascript External -->
-    <script src ="script.js"></script>
+    <script src ="js/script.js"></script>
     
 </body>
 </html>
